@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌾 AgroSenha · Segurança Digital no Campo</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <div class="agro-card">
+
+        <!-- CABEÇALHO -->
+        <header class="agro-header">
+            <h1>
+                <span class="trator-icon">🚜</span> AgroSenha
+                <span>matemática</span>
+            </h1>
+            <p class="slogan">🌽 colheita de segurança digital</p>
+        </header>
+
+        <!-- GRADE PRINCIPAL -->
+        <div class="agro-grid">
+
+            <!-- COLUDA ESQUERDA: matemática + explicação -->
+            <section class="math-section">
+                <h2>🧮 Matemática da Senha</h2>
+                <p class="destaque">
+                    Uma senha forte é como uma boa safra: <strong>combinação</strong>, 
+                    <strong>variedade</strong> e <strong>tamanho</strong>.
+                </p>
+
+                <div class="formula-box">
+                    <span class="formula">N = m<sup>k</sup></span>
+                    <p>
+                        <strong>N</strong> = número total de combinações<br />
+                        <strong>m</strong> = tamanho do alfabeto (caracteres disponíveis)<br />
+                        <strong>k</strong> = comprimento da senha
+                    </p>
+                </div>
+
+                <div class="exemplo-box">
+                    <h3>🌱 Exemplo prático</h3>
+                    <ul>
+                        <li><strong>m = 70</strong> (letras maiúsculas + minúsculas + números + símbolos)</li>
+                        <li><strong>k = 12</strong> caracteres</li>
+                        <li><strong>N = 70<sup>12</sup></strong> ≈ 1,38 × 10<sup>22</sup> combinações</li>
+                    </ul>
+                    <p class="nota">🔐 Isso é mais que grãos de areia na Terra!</p>
+                </div>
+
+                <div class="dica-extra">
+                    <span>🌿</span> Use <strong>entropia</strong> (H = log₂(N)) para medir a força: quanto maior, melhor.
+                </div>
+            </section>
+
+            <!-- COLUNA DIREITA: gerador + interação -->
+            <section class="generator-section">
+                <h2>⚙️ Gerador de Senha</h2>
+                <p class="sub">Ajuste os parâmetros e veja a matemática em ação</p>
+
+                <div class="controls">
+                    <label>
+                        Comprimento (k)
+                        <input type="range" id="lengthSlider" min="6" max="24" value="14" />
+                        <span id="lengthDisplay">14</span>
+                    </label>
+
+                    <div class="check-group">
+                        <label><input type="checkbox" id="chkMaiusculas" checked /> A-Z</label>
+                        <label><input type="checkbox" id="chkMinusculas" checked /> a-z</label>
+                        <label><input type="checkbox" id="chkNumeros" checked /> 0-9</label>
+                        <label><input type="checkbox" id="chkSimbolos" checked /> !@#$%&*</label>
+                    </div>
+
+                    <button id="gerarBtn" class="btn-agro">🌾 Gerar senha</button>
+                </div>
+
+                <!-- RESULTADO -->
+                <div class="result-box">
+                    <div class="senha-display" id="senhaGerada">Clique em gerar</div>
+                    <div class="stats">
+                        <span id="combinacoes">combinações: —</span>
+                        <span id="entropia">entropia: — bits</span>
+                    </div>
+                    <button id="copiarBtn" class="btn-copy">📋 Copiar</button>
+                </div>
+
+                <!-- feedback visual -->
+                <div id="feedback" class="feedback"></div>
+            </section>
+
+        </div>
+
+        <!-- RODAPÉ -->
+        <footer class="agro-footer">
+            <p>🌾 Segurança digital com matemática · plantando senhas fortes desde 2026</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
