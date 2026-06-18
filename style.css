@@ -1,0 +1,354 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    background: #f5f2e9;
+    background-image: radial-gradient(circle at 10% 20%, rgba(180, 210, 140, 0.25) 0%, transparent 50%),
+                      radial-gradient(circle at 90% 80%, rgba(120, 80, 40, 0.1) 0%, transparent 50%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+/* ===== CARD PRINCIPAL ===== */
+.agro-card {
+    max-width: 1100px;
+    width: 100%;
+    background: #fefcf7;
+    border-radius: 48px 48px 32px 32px;
+    box-shadow: 0 20px 40px -12px rgba(60, 40, 20, 0.35),
+                0 8px 16px -8px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 2.8rem;
+    border: 1px solid #e5dccb;
+    transition: 0.3s ease;
+}
+
+/* ===== CABEÇALHO ===== */
+.agro-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    border-bottom: 3px dashed #b5a78b;
+    padding-bottom: 1.2rem;
+}
+
+.agro-header h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #3f2e1b;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.agro-header h1 span {
+    background: #4f7a3b;
+    color: #f9f3e6;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.2rem 1rem;
+    border-radius: 40px;
+    letter-spacing: 0.3px;
+    margin-left: 0.5rem;
+}
+
+.trator-icon {
+    font-size: 2.8rem;
+    filter: drop-shadow(0 4px 4px rgba(80, 60, 20, 0.2));
+}
+
+.slogan {
+    font-size: 1.1rem;
+    color: #5f4e34;
+    background: #ece5d8;
+    padding: 0.3rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+/* ===== GRADE ===== */
+.agro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    margin: 1.8rem 0 0.8rem;
+}
+
+@media (max-width: 760px) {
+    .agro-card {
+        padding: 1.8rem;
+    }
+    .agro-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .agro-header h1 {
+        font-size: 2rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* ===== SEÇÃO MATEMÁTICA ===== */
+.math-section {
+    background: #f4efe6;
+    padding: 1.8rem 1.8rem 2rem;
+    border-radius: 32px;
+    border: 1px solid #dacfbc;
+    box-shadow: inset 0 2px 6px rgba(90, 70, 40, 0.08);
+}
+
+.math-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d4a1e;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.destaque {
+    font-size: 1.05rem;
+    color: #2f281c;
+    background: #e9e0d1;
+    padding: 0.6rem 1rem;
+    border-radius: 24px;
+    margin-bottom: 1.5rem;
+    border-left: 6px solid #6f934f;
+}
+
+.formula-box {
+    background: #e7ddcc;
+    padding: 1.2rem 1.5rem;
+    border-radius: 24px;
+    margin: 1.2rem 0;
+    text-align: center;
+}
+
+.formula {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2d4a1e;
+    font-family: 'Times New Roman', serif;
+}
+
+.formula-box p {
+    font-size: 0.95rem;
+    color: #3e321f;
+    margin-top: 0.3rem;
+}
+
+.exemplo-box {
+    background: #e3d8c4;
+    padding: 1.2rem 1.5rem;
+    border-radius: 24px;
+    margin: 1.2rem 0;
+}
+
+.exemplo-box h3 {
+    color: #2d4a1e;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.exemplo-box ul {
+    list-style: none;
+    padding-left: 0.2rem;
+}
+.exemplo-box li {
+    padding: 0.2rem 0;
+    color: #2f281c;
+}
+
+.nota {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #4c3d28;
+}
+
+.dica-extra {
+    background: #c9dbb8;
+    padding: 0.8rem 1.2rem;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+}
+
+/* ===== GERADOR ===== */
+.generator-section {
+    background: #f6f1e8;
+    padding: 1.8rem 1.8rem 2rem;
+    border-radius: 32px;
+    border: 1px solid #dacfbc;
+}
+
+.generator-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d4a1e;
+    margin-bottom: 0.2rem;
+}
+
+.sub {
+    color: #5f4e34;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.controls label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #3f2e1b;
+    flex-wrap: wrap;
+}
+
+.controls input[type="range"] {
+    flex: 1;
+    min-width: 100px;
+    accent-color: #4f7a3b;
+    height: 6px;
+}
+
+#lengthDisplay {
+    background: #4f7a3b;
+    color: white;
+    font-weight: 700;
+    padding: 0.1rem 0.8rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    min-width: 32px;
+    text-align: center;
+}
+
+.check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+    margin: 0.8rem 0 1.2rem;
+}
+
+.check-group label {
+    font-weight: 400;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.check-group input[type="checkbox"] {
+    accent-color: #4f7a3b;
+    width: 17px;
+    height: 17px;
+}
+
+.btn-agro {
+    background: #4f7a3b;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0 6px 0 #2d4a1e;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.btn-agro:hover {
+    background: #5f8f49;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #2d4a1e;
+}
+.btn-agro:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #2d4a1e;
+}
+
+/* ===== RESULTADO ===== */
+.result-box {
+    background: #e7ddcc;
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.2rem 1rem;
+    border-radius: 28px;
+    border: 1px solid #cbbca5;
+}
+
+.senha-display {
+    font-family: 'Courier New', monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 18px;
+    text-align: center;
+    word-break: break-all;
+    color: #1f3d12;
+    border: 2px solid #b5a78b;
+    min-height: 3.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.6rem 0 0.8rem;
+    font-size: 0.9rem;
+    color: #3f321f;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.btn-copy {
+    background: #3f2e1b;
+    border: none;
+    color: #f9f3e6;
+    font-weight: 600;
+    padding: 0.3rem 1.6rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.15s;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 0.2rem;
+}
+
+.btn-copy:hover {
+    background: #5f4e34;
+}
+
+.feedback {
+    margin-top: 0.6rem;
+    font-weight: 500;
+    color: #2d4a1e;
+    min-height: 1.6rem;
+    text-align: center;
+}
+
+/* ===== RODAPÉ ===== */
+.agro-footer {
+    margin-top: 2.2rem;
+    text-align: center;
+    color: #5f4e34;
+    font-size: 0.9rem;
+    border-top: 2px dashed #dacfbc;
+    padding-top: 1.2rem;
+}
